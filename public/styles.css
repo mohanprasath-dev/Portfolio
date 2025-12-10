@@ -98,7 +98,7 @@ h2::after {
 p {
   margin-bottom: 1.5rem;
   color: var(--gray-200);
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.7;
 }
 
@@ -376,7 +376,7 @@ nav a {
   color: var(--light);
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: var(--transition);
   position: relative;
   padding: 0.5rem 0;
@@ -485,7 +485,7 @@ nav a:hover {
 }
 
 .hero p {
-  font-size: clamp(1.1rem, 3vw, 1.8rem);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
   margin-bottom: 2.5rem;
   color: var(--gray);
   font-weight: 400;
@@ -524,7 +524,7 @@ nav a:hover {
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
@@ -685,7 +685,7 @@ section {
 
 .section-subtitle {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   color: var(--gray);
   margin-bottom: 3rem;
   max-width: 600px;
@@ -850,7 +850,7 @@ section {
 .greeting {
   display: inline-block;
   color: var(--primary);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   text-transform: uppercase;
@@ -875,7 +875,7 @@ section {
 }
 
 .role {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--gray);
   font-weight: 500;
   margin-bottom: 1.5rem;
@@ -889,7 +889,7 @@ section {
   margin-bottom: 1.2rem;
   line-height: 1.8;
   color: var(--gray);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
 }
 
 .light-mode .about-description p {
@@ -938,13 +938,13 @@ section {
 }
 
 .feature-text h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 0.3rem;
   color: var(--light);
 }
 
 .feature-text p {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--gray);
   margin: 0;
   line-height: 1.5;
@@ -962,7 +962,7 @@ section {
   background: rgba(99, 102, 241, 0.1);
   border: 1px solid rgba(99, 102, 241, 0.3);
   border-radius: 50px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: var(--primary);
   display: flex;
@@ -1193,7 +1193,7 @@ section {
 }
 
 .project-content h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 0.5rem;
 }
 
@@ -1201,6 +1201,7 @@ section {
   margin-bottom: 1rem;
   color: var(--gray);
   flex-grow: 1;
+  font-size: 0.95rem;
 }
 
 .light-mode .project-content p {
@@ -1259,7 +1260,7 @@ section {
 }
 
 .skills-column h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 2.5rem;
   color: var(--light);
   position: relative;
@@ -1307,7 +1308,7 @@ section {
 
 .skill-header span:first-child {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--light);
 }
 
@@ -1434,7 +1435,7 @@ section {
 }
 
 .timeline-title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -1481,7 +1482,7 @@ section {
 }
 
 .contact-info h3 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 2rem;
   color: var(--light);
   position: relative;
@@ -1539,7 +1540,7 @@ section {
 }
 
 .contact-item h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 0.5rem;
   color: var(--light);
 }
@@ -1689,7 +1690,7 @@ footer::before {
   max-width: 600px;
   margin: 0 auto 2.5rem;
   color: var(--gray);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   line-height: 1.8;
 }
 
