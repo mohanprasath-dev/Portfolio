@@ -6,7 +6,7 @@ A modern, responsive portfolio website with contact form functionality.
 
 ```
 Portfolio/
-├── public/                 # Frontend files
+├── public/                # Frontend files
 │   ├── index.html         # Main portfolio page
 │   ├── Projects.html      # Projects showcase page
 │   ├── styles.css         # Main stylesheet
@@ -14,16 +14,16 @@ Portfolio/
 │   ├── script.js          # Main JavaScript
 │   └── Projects.js        # Projects page JavaScript
 │
-├── server/                 # Backend files
+├── server/                # Backend files
 │   └── server.js          # Express server for contact form
 │
-├── assets/                 # Static assets
+├── assets/                # Static assets
 │   └── images/            # Image files
 │       ├── mp1.png
 │       ├── mp2.png
 │       └── Photo.png
 │
-├── docs/                   # Documentation
+├── docs/                  # Documentation
 │   ├── README.md          # Main documentation
 │   └── README_BACKEND.md  # Backend setup guide
 │
@@ -34,45 +34,8 @@ Portfolio/
 │
 ├── package.json            # Node.js dependencies
 ├── .env                    # Environment variables (create this)
-└── .gitignore             # Git ignore rules
+└── .gitignore              # Git ignore rules
 ```
-
-## 🚀 Quick Start
-
-### Frontend
-1. Open `public/index.html` in your browser
-2. Or use a local server:
-   ```bash
-   # Using Python
-   cd public
-   python -m http.server 8000
-   
-   # Using Node.js (http-server)
-   npx http-server public -p 8000
-   ```
-
-### Backend
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-2. Create a `.env` file in the root directory:
-   ```env
-   PORT=3000
-   EMAIL_SERVICE=gmail
-   EMAIL_USER=your-email@gmail.com
-   EMAIL_PASS=your-app-password
-   RECEIVER_EMAIL=your-email@gmail.com
-   SEND_CONFIRMATION=true
-   ```
-
-3. Start the server:
-   ```bash
-   npm start
-   # or for development with auto-reload:
-   npm run dev
-   ```
 
 ## 📝 Features
 
@@ -96,13 +59,6 @@ Portfolio/
 - Express.js
 - Nodemailer (email sending)
 - Express Rate Limit (spam protection)
-
-## 📚 Documentation
-
-- **Backend Setup**: See `docs/README_BACKEND.md` for detailed backend configuration
-- **Gmail Setup**: For email configuration, check the backend documentation
-
-## 🔧 Development
 
 ### File Paths
 - All frontend files are in `public/`
