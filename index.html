@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Mohan Prasath | Web Developer & Designer</title>
+    <meta name="description" content="Creative web developer and designer portfolio showcasing modern web projects">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
+    <meta property="og:title" content="Mohan Prasath | Web Developer Portfolio">
+    <meta property="og:description" content="Explore my creative web development projects and designs">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Right-click message -->
+    <div class="right-click-message">Right-click is disabled on this page</div>
+
+    <!-- Header -->
+    <header>
+        <a href="#home" class="logo">MP</a>
+        <button class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <button class="close-menu">
+                <i class="fas fa-times"></i>
+            </button>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div class="hero-content">
+            <h1>Mohan Prasath P</h1>
+            <p>Creative Web Developer</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+        <a href="#about" class="scroll-down">
+            <i class="fas fa-chevron-down fa-2x"></i>
+        </a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="profile-card">
+                        <div class="profile-icon">
+                            <div class="icon-bg"></div>
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="floating-shapes">
+                            <div class="shape shape-1"></div>
+                            <div class="shape shape-2"></div>
+                            <div class="shape shape-3"></div>
+                        </div>
+                    </div>
+                    <div class="stats-mini">
+                        <div class="stat-mini">
+                            <div class="stat-number-mini">3+</div>
+                            <div class="stat-label-mini">Years Coding</div>
+                        </div>
+                        <div class="stat-mini">
+                            <div class="stat-number-mini">42+</div>
+                            <div class="stat-label-mini">Projects</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <div class="about-intro">
+                        <span class="greeting">Hello, I'm</span>
+                        <h3>Mohan Prasath P</h3>
+                        <p class="role">Web Developer & Creative Designer</p>
+                    </div>
+                    <div class="about-description">
+                        <p>I'm an 18-year-old web developer and designer passionate about creating immersive digital experiences. With a blend of technical skills and creative vision, I build websites that are not only functional but visually stunning.</p>
+                        <p>My journey started when I was 15, tinkering with HTML and CSS. Since then, I've mastered modern frameworks and design principles to craft responsive, performant, and accessible web applications.</p>
+                    </div>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Creative Problem Solver</h4>
+                                <p>Turning complex ideas into elegant solutions</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Fast Learner</h4>
+                                <p>Always exploring new technologies and trends</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="feature-text">
+                                <h4>Passionate Developer</h4>
+                                <p>Love what I do, and it shows in my work</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tags">
+                        <div class="tag">
+                            <i class="fas fa-code"></i>
+                            <span>Web Development</span>
+                        </div>
+                        <div class="tag">
+                            <i class="fas fa-palette"></i>
+                            <span>UI/UX Design</span>
+                        </div>
+                        <div class="tag">
+                            <i class="fas fa-cube"></i>
+                            <span>3D Animation</span>
+                        </div>
+                        <div class="tag">
+                            <i class="fas fa-magic"></i>
+                            <span>Creative Coding</span>
+                        </div>
+                    </div>
+                    <div class="about-actions">
+                        <a href="#" class="btn btn-primary">
+                            <i class="fas fa-download"></i>
+                            Download Resume
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-content">
+            <h2 class="section-title">My Projects</h2>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass">
+                    <div class="project-img">
+                        <div style="background: linear-gradient(45deg, #4338ca, #7c3aed); width: 100%; height: 100%;"><img src="../assets/images/mp1.png" alt="Nebula-SAAS Dashboard"></div>
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="project-tag">HTML5</span>
+                                <span class="project-tag">CSS3</span>
+                                <span class="project-tag">JavaScript(ES6+)</span>
+                                <span class="project-tag">Chart.js</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Nebula-SAAS Dashboard</h3>
+                        <p>A fully responsive SaaS Admin Dashboard with analytics, user management, billing, and settings - featuring dark/light mode, interactive charts, and mobile-optimized navigation.</p>
+                        <div class="project-links">
+                            <a href="https://mohan-dev-portfolio.github.io/Nebula-Saas-Dashboard/" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/mohan-dev-portfolio/Nebula-Saas-Dashboard.git" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card glass">
+                    <div class="project-img">
+                        <div style="background: linear-gradient(45deg, #0d9488, #14b8a6); width: 100%; height: 100%;"><img src="../assets/images/mp2.png" alt="TaskDrift Project"></div>
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>TaskDrift</h3>
+                        <p>TaskDrift helps you build stunning, high-performance portfolios and landing pages. Fast, accessible, and scalable—it is the modern solution for your professional web presence.</p>
+                        <div class="project-links">
+                            <a href="https://mohan-dev-portfolio.github.io/TaskDrift/" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://github.com/mohan-dev-portfolio/TaskDrift.git" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card glass">
+                    <div class="project-img">
+                        <div style="background: linear-gradient(45deg, #b45309, #f59e0b); width: 100%; height: 100%;"></div>
+                        <div class="project-overlay">
+                            <div class="project-tags">
+                                <span class="project-tag">WebXR</span>
+                                <span class="project-tag">Three.js</span>
+                                <span class="project-tag">GSAP</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>AR Portfolio Website</h3>
+                        <p>Augmented reality portfolio using WebXR and Three.js with interactive 3D elements.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">View Project <i class="fas fa-external-link-alt"></i></a>
+                            <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+            <div class="more-projects">
+                <a href="Projects.html" class="btn btn-secondary">View More Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-content">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-column">
+                    <h3>Technical Expertise</h3>
+                    <!-- Skill 1 -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>React</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Skill 2 -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Next.js</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Skill 3 -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Three.js</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Skill 4 -->
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>JavaScript</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skills-column">
+                    <h3>Experience & Education</h3>
+                    <div class="timeline">
+                        <!-- Timeline item 1 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">2025-2029</div>
+                            <h4 class="timeline-title">B.tech in Computer Science and Engineering(AI and ML)</h4>
+                            <div class="timeline-org">Nxtwave Institute of Advanced Technology(NIAT)</div>
+                            <p>Completed an intensive bootcamp focusing on modern web technologies including React, Node.js</p>
+                        </div>
+
+                        <!-- Timeline item 2 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">2025</div>
+                            <h4 class="timeline-title">Machine Learning</h4>
+                            <div class="timeline-org">Internshala</div>
+                            <p>Learned core Machine Learning concepts and built real-world models using Python   and Jupyter Notebook.</p>
+                        </div>
+                        
+                        <!-- Timeline item 3 -->
+                        <div class="timeline-item">
+                            <div class="timeline-date">2023-2024</div>
+                            <h4 class="timeline-title">Full-stack Web Development Certification</h4>
+                            <div class="timeline-org">CSC Computer Education</div>
+                            <p>Advanced full-stack development program with focus on modern frameworks.
+                                Specialized in Front-end development.</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-content">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have a project in mind? Let's work together!</p>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.                        </p>
+                        
+                        <div class="contact-item" style="padding-top: 2rem;">
+                            <div class="contact-icon" >
+                                <i class="fas fa-envelope"></i>
+                            </div >
+                            <div>
+                                <h4>Email</h4>
+                                <p>mohanprasath210607@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>TamilNadu, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Follow Me</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mohanprasath21" class="social-link" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="contact-form glass">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Mohan <span>Prasath P</span></div>
+            <p class="footer-text">Creating immersive digital experiences with modern web technologies.</p>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/mohanprasath21" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p class="copyright">© 2025 Mohan Prasath P. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
