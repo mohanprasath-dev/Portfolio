@@ -49,14 +49,42 @@ if (backToTop) {
   });
 }
 
-// Custom Cursor
+// Custom Cursor - Desktop Only
 const cursor = document.querySelector(".cursor");
-if (cursor) {
-  document.addEventListener("mousemove", (e) => {
-    cursor.style.left = e.clientX + "px";
-    cursor.style.top = e.clientY + "px";
-  });
+
+// Check if device is desktop (has fine pointer and hover capability)
+function isDesktop() {
+  // Check for touch capability and screen size
+  const hasCoarsePointer = window.matchMedia('(pointer: coarse)').matches;
+  const hasNoHover = window.matchMedia('(hover: none)').matches;
+  const isSmallScreen = window.innerWidth <= 1024;
+  
+  // Return true only if it's a desktop device
+  return !hasCoarsePointer && !hasNoHover && !isSmallScreen;
 }
+
+// Initialize cursor only on desktop
+function initCursor() {
+  if (cursor && isDesktop()) {
+    cursor.style.display = 'block';
+    document.addEventListener("mousemove", (e) => {
+      cursor.style.left = e.clientX + "px";
+      cursor.style.top = e.clientY + "px";
+    });
+  } else if (cursor) {
+    cursor.style.display = 'none';
+  }
+}
+
+// Initialize cursor
+initCursor();
+
+// Re-check on resize (for orientation changes or window resizing)
+window.addEventListener('resize', () => {
+  if (cursor) {
+    cursor.style.display = isDesktop() ? 'block' : 'none';
+  }
+});
 
 // Disable right-click
 document.addEventListener("contextmenu", (e) => {
@@ -72,27 +100,31 @@ document.addEventListener("contextmenu", (e) => {
   }
 });
 
-// Add hover effect to links and buttons
-document.querySelectorAll("a, button, .project-card, .island-pill").forEach((element) => {
-  element.addEventListener("mouseenter", () => {
-    cursor.classList.add("hover");
-  });
+// Add hover effect to links and buttons - Desktop Only
+if (cursor && isDesktop()) {
+  document.querySelectorAll("a, button, .project-card, .island-pill").forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      cursor.classList.add("hover");
+    });
 
-  element.addEventListener("mouseleave", () => {
-    cursor.classList.remove("hover");
+    element.addEventListener("mouseleave", () => {
+      cursor.classList.remove("hover");
+    });
   });
-});
+}
 
-// Add text hover effect to navigation links (including Dynamic Island nav)
-document.querySelectorAll("nav a, .island-nav a, .island-mobile-nav a").forEach((link) => {
-  link.addEventListener("mouseenter", () => {
-    cursor.classList.add("text-hover");
-  });
+// Add text hover effect to navigation links (including Dynamic Island nav) - Desktop Only
+if (cursor && isDesktop()) {
+  document.querySelectorAll("nav a, .island-nav a, .island-mobile-nav a").forEach((link) => {
+    link.addEventListener("mouseenter", () => {
+      cursor.classList.add("text-hover");
+    });
 
-  link.addEventListener("mouseleave", () => {
-    cursor.classList.remove("text-hover");
+    link.addEventListener("mouseleave", () => {
+      cursor.classList.remove("text-hover");
+    });
   });
-});
+}
 
 // ========================================
 // Dynamic Island Navigation

@@ -109,7 +109,7 @@ body {
 }
 
 .loader-letter {
-  font-size: 4rem;
+  font-size: clamp(2.5rem, 10vw, 4rem);
   font-weight: 800;
   background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
   background-size: 200% 200%;
@@ -172,7 +172,7 @@ body {
 
 /* Loader Progress Bar */
 .loader-progress {
-  width: 500px;
+  width: min(500px, 80vw);
   height: 3px;
   background: rgba(99, 102, 241, 0.2);
   border-radius: 3px;
@@ -408,7 +408,7 @@ section {
   width: 80px;
 }
 
-/* Custom Cursor */
+/* Custom Cursor - Desktop Only */
 .cursor {
   position: fixed;
   width: 32px;
@@ -432,6 +432,15 @@ section {
   width: 100px;
   height: 100px;
   background: rgba(99, 102, 241, 0.1);
+}
+
+/* Hide custom cursor on non-desktop devices */
+@media (max-width: 1024px), (hover: none), (pointer: coarse) {
+  .cursor {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+  }
 }
 
 /* ========================================
@@ -3122,17 +3131,17 @@ table {
 /* Back to Top Button */
 .back-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  width: 50px;
-  height: 50px;
+  bottom: clamp(15px, 4vw, 30px);
+  right: clamp(15px, 4vw, 30px);
+  width: clamp(42px, 10vw, 50px);
+  height: clamp(42px, 10vw, 50px);
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 3vw, 1.2rem);
   cursor: pointer;
   z-index: 1000;
   opacity: 0;
@@ -3144,6 +3153,8 @@ table {
               box-shadow 0.3s ease;
   box-shadow: 0 5px 20px rgba(99, 102, 241, 0.4);
   border: none;
+  min-width: 44px;
+  min-height: 44px;
 }
 
 .back-to-top.visible {
@@ -3173,4 +3184,122 @@ table {
 
 body {
   animation: pageLoad 0.5s ease-out;
+}
+
+/* ========================================
+   Touch Device Optimizations
+   ======================================== */
+
+@media (hover: none) and (pointer: coarse) {
+  /* Disable hover transformations on touch devices */
+  .project-card:hover {
+    transform: none;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  .btn:hover {
+    transform: none;
+  }
+  
+  .glass:hover {
+    transform: none;
+  }
+  
+  .tag:hover {
+    transform: none;
+  }
+  
+  .feature-item:hover {
+    transform: none;
+  }
+  
+  .stat-mini:hover {
+    transform: none;
+  }
+  
+  .skills-column:hover {
+    transform: none;
+  }
+  
+  .skill-item:hover {
+    transform: none;
+  }
+  
+  .timeline-item:hover {
+    transform: none;
+  }
+  
+  .contact-item:hover {
+    transform: none;
+  }
+  
+  .social-link:hover {
+    transform: none;
+  }
+  
+  .footer-social a:hover {
+    transform: none;
+  }
+  
+  .back-to-top:hover {
+    transform: none;
+  }
+  
+  /* Add active states for touch feedback */
+  .project-card:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+  
+  .btn:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+  
+  .tag:active {
+    transform: scale(0.95);
+  }
+  
+  .social-link:active {
+    transform: scale(0.9);
+  }
+  
+  .footer-social a:active {
+    transform: scale(0.9);
+  }
+  
+  /* Ensure scrollbars are visible on touch */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  
+  /* Disable text selection prevention for better UX */
+  * {
+    -webkit-user-select: auto;
+    user-select: auto;
+  }
+}
+
+/* Prevent zoom on double tap for form elements on iOS */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+/* Safe area support for notched devices */
+@supports (padding-top: env(safe-area-inset-top)) {
+  header.dynamic-island {
+    padding-top: max(12px, env(safe-area-inset-top));
+  }
+  
+  footer {
+    padding-bottom: max(2rem, env(safe-area-inset-bottom));
+  }
+  
+  .back-to-top {
+    bottom: max(30px, calc(env(safe-area-inset-bottom) + 15px));
+    right: max(30px, calc(env(safe-area-inset-right) + 15px));
+  }
 }
