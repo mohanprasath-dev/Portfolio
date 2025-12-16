@@ -1,6 +1,6 @@
 # Portfolio Website
 
-A modern, responsive portfolio website with contact form functionality.
+A modern, responsive static portfolio website.
 
 ## 📁 Project Structure
 
@@ -8,32 +8,19 @@ A modern, responsive portfolio website with contact form functionality.
 Portfolio/
 ├── public/                # Frontend files
 │   ├── index.html         # Main portfolio page
-│   ├── Projects.html      # Projects showcase page
+│   ├── projects.html      # Projects showcase page
 │   ├── styles.css         # Main stylesheet
 │   ├── Projects.css       # Projects page styles
 │   ├── script.js          # Main JavaScript
 │   └── Projects.js        # Projects page JavaScript
 │
-├── server/                # Backend files
-│   └── server.js          # Express server for contact form
-│
 ├── assets/                # Static assets
 │   └── images/            # Image files
 │       ├── mp1.png
 │       ├── mp2.png
+│       ├── og-image.png
 │       └── Photo.png
 │
-├── docs/                  # Documentation
-│   ├── README.md          # Main documentation
-│   └── README_BACKEND.md  # Backend setup guide
-│
-├── archive/                # Old/unused files
-│   ├── 1.html
-│   ├── 2.html
-│   └── 3.html
-│
-├── package.json            # Node.js dependencies
-├── .env                    # Environment variables (create this)
 └── .gitignore              # Git ignore rules
 ```
 
@@ -41,30 +28,17 @@ Portfolio/
 
 - **Responsive Design**: Works on all devices
 - **Modern UI**: Glassmorphism effects and smooth animations
-- **Contact Form**: Backend integration with email notifications
+- **Contact Form**: Integrated with Formspree
 - **3D Animations**: Three.js powered hero section
-- **Dark/Light Mode**: Theme toggle functionality
 - **Project Showcase**: Dedicated projects page with filtering
 
 ## 🛠️ Technologies
 
-### Frontend
 - HTML5
 - CSS3 (with animations)
 - JavaScript (ES6+)
 - Three.js (3D graphics)
-
-### Backend
-- Node.js
-- Express.js
-- Nodemailer (email sending)
-- Express Rate Limit (spam protection)
-
-### File Paths
-- All frontend files are in `public/`
-- All backend files are in `server/`
-- Images are in `assets/images/`
-- Update paths accordingly when adding new files
+- Formspree (contact form handling)
 
 ### Adding New Pages
 1. Create HTML file in `public/`

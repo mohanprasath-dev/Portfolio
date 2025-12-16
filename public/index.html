@@ -8,45 +8,94 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>">
     <meta property="og:title" content="Mohan Prasath | Web Developer Portfolio">
     <meta property="og:description" content="Explore my creative web development projects and designs">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+    <meta property="og:image" content="assets/images/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body> 
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader" id="pageLoader">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="loader-letter">M</span>
+                <span class="loader-letter">P</span>
+            </div>
+            
+            <p class="loader-text">Creating Experience<span class="loader-dots"></span></p>
+            <div class="loader-progress">
+                <div class="loader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
     <!-- Custom Cursor -->
     <div class="cursor"></div>
 
     <!-- Right-click message -->
     <div class="right-click-message">Right-click is disabled on this page</div>
 
-    <!-- Header -->
-    <header>
-        <a href="#home" class="logo">MP</a>
-        <button class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav>
-            <button class="close-menu">
-                <i class="fas fa-times"></i>
-            </button>
-            <ul>
-                <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        <button class="theme-toggle">
-            <i class="fas fa-moon"></i>
-        </button>
+    <!-- 3D Background Canvas (Fixed across all sections) -->
+    <canvas id="hero-canvas"></canvas>
+
+    <!-- ========================================
+         Dynamic Island Navigation
+    ======================================== -->
+    <header class="dynamic-island">
+        <div class="island-container">
+            <div class="island-pill">
+                <!-- Collapsed State Content -->
+                <div class="island-collapsed">
+                    <a href="#home" class="island-logo">MP</a>
+                    <div class="island-indicators">
+                        <span class="status-dot"></span>
+                    </div>
+                </div>
+
+                <!-- Expanded State Content -->
+                <div class="island-expanded">
+                    <a href="#home" class="island-logo">MP</a>
+                    <nav class="island-nav">
+                        <ul>
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Mobile Menu Expanded -->
+                <div class="island-menu-expanded">
+                    <div class="island-menu-header">
+                        <a href="#home" class="island-logo">MP</a>
+                        <button class="island-close">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <nav class="island-mobile-nav">
+                        <ul>
+                            <li><a href="#home" class="active">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ========================================
+         Hero Section
+    ======================================== -->
     <section id="home" class="hero">
-        <canvas id="hero-canvas"></canvas>
         <div class="hero-content">
             <h1>Mohan Prasath P</h1>
             <p>Creative Web Developer</p>
@@ -60,11 +109,14 @@
         </a>
     </section>
 
-    <!-- About Section -->
+    <!-- ========================================
+         About Section
+    ======================================== -->
     <section id="about" class="about">
         <div class="section-content">
             <h2 class="section-title">About Me</h2>
             <div class="about-grid">
+                <!-- Profile Visual -->
                 <div class="about-visual">
                     <div class="profile-card">
                         <div class="profile-icon">
@@ -88,16 +140,20 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- About Content -->
                 <div class="about-content">
                     <div class="about-intro">
                         <span class="greeting">Hello, I'm</span>
                         <h3>Mohan Prasath P</h3>
                         <p class="role">Web Developer & Creative Designer</p>
                     </div>
+
                     <div class="about-description">
                         <p>I'm an 18-year-old web developer and designer passionate about creating immersive digital experiences. With a blend of technical skills and creative vision, I build websites that are not only functional but visually stunning.</p>
                         <p>My journey started when I was 15, tinkering with HTML and CSS. Since then, I've mastered modern frameworks and design principles to craft responsive, performant, and accessible web applications.</p>
                     </div>
+
                     <div class="about-features">
                         <div class="feature-item">
                             <div class="feature-icon">
@@ -127,6 +183,7 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="tags">
                         <div class="tag">
                             <i class="fas fa-code"></i>
@@ -145,6 +202,7 @@
                             <span>Creative Coding</span>
                         </div>
                     </div>
+
                     <div class="about-actions">
                         <a href="#" class="btn btn-primary">
                             <i class="fas fa-download"></i>
@@ -160,16 +218,19 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ========================================
+         Projects Section
+    ======================================== -->
     <section id="projects" class="projects">
         <div class="section-content">
             <h2 class="section-title">My Projects</h2>
-            
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card glass">
                     <div class="project-img">
-                        <div style="background: linear-gradient(45deg, #4338ca, #7c3aed); width: 100%; height: 100%;"><img src="../assets/images/mp1.png" alt="Nebula-SAAS Dashboard"></div>
+                        <div style="background: linear-gradient(45deg, #4338ca, #7c3aed); width: 100%; height: 100%;">
+                            <img src="../assets/images/mp1.png" alt="Nebula-SAAS Dashboard">
+                        </div>
                         <div class="project-overlay">
                             <div class="project-tags">
                                 <span class="project-tag">HTML5</span>
@@ -188,11 +249,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="project-card glass">
                     <div class="project-img">
-                        <div style="background: linear-gradient(45deg, #0d9488, #14b8a6); width: 100%; height: 100%;"><img src="../assets/images/mp2.png" alt="TaskDrift Project"></div>
+                        <div style="background: linear-gradient(45deg, #0d9488, #14b8a6); width: 100%; height: 100%;">
+                            <img src="../assets/images/mp2.png" alt="TaskDrift Project">
+                        </div>
                         <div class="project-overlay">
                             <div class="project-tags">
                                 <span class="project-tag">HTML</span>
@@ -210,7 +273,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 3 -->
                 <div class="project-card glass">
                     <div class="project-img">
@@ -231,22 +294,24 @@
                             <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
             <div class="more-projects">
-                <a href="Projects.html" class="btn btn-secondary">View More Projects</a>
+                <a href="projects.html" class="btn btn-secondary">View More Projects</a>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- ========================================
+         Skills Section
+    ======================================== -->
     <section id="skills" class="skills">
         <div class="section-content">
             <h2 class="section-title">My Skills</h2>
             <div class="skills-grid">
+                <!-- Technical Skills Column -->
                 <div class="skills-column">
                     <h3>Technical Expertise</h3>
-                    <!-- Skill 1 -->
                     <div class="skill-item">
                         <div class="skill-header">
                             <span>React</span>
@@ -256,8 +321,6 @@
                             <div class="skill-progress" style="width: 95%"></div>
                         </div>
                     </div>
-                    
-                    <!-- Skill 2 -->
                     <div class="skill-item">
                         <div class="skill-header">
                             <span>Next.js</span>
@@ -267,8 +330,6 @@
                             <div class="skill-progress" style="width: 90%"></div>
                         </div>
                     </div>
-                    
-                    <!-- Skill 3 -->
                     <div class="skill-item">
                         <div class="skill-header">
                             <span>Three.js</span>
@@ -278,8 +339,6 @@
                             <div class="skill-progress" style="width: 85%"></div>
                         </div>
                     </div>
-                    
-                    <!-- Skill 4 -->
                     <div class="skill-item">
                         <div class="skill-header">
                             <span>JavaScript</span>
@@ -290,62 +349,57 @@
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Experience & Education Column -->
                 <div class="skills-column">
                     <h3>Experience & Education</h3>
                     <div class="timeline">
-                        <!-- Timeline item 1 -->
                         <div class="timeline-item">
                             <div class="timeline-date">2025-2029</div>
                             <h4 class="timeline-title">B.tech in Computer Science and Engineering(AI and ML)</h4>
                             <div class="timeline-org">Nxtwave Institute of Advanced Technology(NIAT)</div>
                             <p>Completed an intensive bootcamp focusing on modern web technologies including React, Node.js</p>
                         </div>
-
-                        <!-- Timeline item 2 -->
                         <div class="timeline-item">
                             <div class="timeline-date">2025</div>
                             <h4 class="timeline-title">Machine Learning</h4>
                             <div class="timeline-org">Internshala</div>
-                            <p>Learned core Machine Learning concepts and built real-world models using Python   and Jupyter Notebook.</p>
+                            <p>Learned core Machine Learning concepts and built real-world models using Python and Jupyter Notebook.</p>
                         </div>
-                        
-                        <!-- Timeline item 3 -->
                         <div class="timeline-item">
                             <div class="timeline-date">2023-2024</div>
                             <h4 class="timeline-title">Full-stack Web Development Certification</h4>
                             <div class="timeline-org">CSC Computer Education</div>
-                            <p>Advanced full-stack development program with focus on modern frameworks.
-                                Specialized in Front-end development.</p>
+                            <p>Advanced full-stack development program with focus on modern frameworks. Specialized in Front-end development.</p>
                         </div>
-                        
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ========================================
+         Contact Section
+    ======================================== -->
     <section id="contact" class="contact">
         <div class="section-content">
             <h2 class="section-title">Get In Touch</h2>
             <p class="section-subtitle">Have a project in mind? Let's work together!</p>
             <div class="contact-grid">
+                <!-- Contact Information -->
                 <div class="contact-info">
                     <h3>Contact Information</h3>
                     <div class="contact-details">
-                        <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.                        </p>
-                        
-                        <div class="contact-item" style="padding-top: 2rem;">
-                            <div class="contact-icon" >
+                        <p>Feel free to reach out if you're looking for a developer, have a question, or just want to connect.</p>
+                        <div class="contact-item">
+                            <div class="contact-icon">
                                 <i class="fas fa-envelope"></i>
-                            </div >
+                            </div>
                             <div>
                                 <h4>Email</h4>
                                 <p>mohanprasath210607@gmail.com</p>
                             </div>
                         </div>
-                        
                         <div class="contact-item">
                             <div class="contact-icon">
                                 <i class="fas fa-map-marker-alt"></i>
@@ -356,7 +410,6 @@
                             </div>
                         </div>
                     </div>
-                    
                     <h3>Follow Me</h3>
                     <div class="social-links">
                         <a href="#" class="social-link">
@@ -373,24 +426,22 @@
                         </a>
                     </div>
                 </div>
-                
+
+                <!-- Contact Form -->
                 <div class="contact-form glass">
-                    <form id="contactForm">
+                    <form id="contactForm" action="https://formspree.io/f/xdkqroyk" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
-                            <input type="text" id="name" class="form-control" required>
+                            <input type="text" id="name" name="name" class="form-control" required>
                         </div>
-                        
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" class="form-control" required>
+                            <input type="email" id="email" name="email" class="form-control" required>
                         </div>
-                        
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
                         </div>
-                        
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
@@ -398,7 +449,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ========================================
+         Footer
+    ======================================== -->
     <footer>
         <div class="footer-content">
             <div class="footer-logo">Mohan <span>Prasath P</span></div>
@@ -412,6 +465,12 @@
             <p class="copyright">© 2025 Mohan Prasath P. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
     <script src="script.js"></script>
 </body>
 </html>
