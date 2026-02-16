@@ -1,0 +1,27 @@
+[33me2457df[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Merge branch 'main' of https://github.com/mohan-dev-portfolio/Portfolio
+[33mba79632[m Add resume, project image, and update project info
+[33m2012786[m Update copyright year to 2026
+[33m001dd7b[m Add maintenance modal and update skills section
+[33mf5ab86f[m Add floating logo and refine navigation UI
+[33m6afc927[m Improve mobile and touch support, enhance accessibility
+[33maa2a1fe[m Add GitHub Pages config files
+[33mb21f4ce[m Add 3D Three.js background to Projects page
+[33m5bc9a09[m Merge pull request #1 from mohan-dev-portfolio/public
+[33m8f91302[m[33m ([m[1;32mpublic[m[33m)[m Remove backend and archive, update project to static site
+[33mced6c8f[m fix: Correct relative image path in index.html
+[33m4974811[m Add portfolio site with projects and styles
+[33m360d6ab[m Add portfolio site with projects and styles
+[33mf4a9893[m Reduce font sizes and update Live Server port
+[33md7daa5d[m Move index.html to public directory
+[33m469bd88[m Merge branch 'main' of https://github.com/mohan-dev-portfolio/Portfolio
+[33m5e316d9[m Move index.html to project root
+[33m5972598[m Revise README with updated project structure
+[33m204a258[m Restructure project and add portfolio files
+[33m004cb68[m update portfolio section
+[33m84c9f84[m Merge branch 'main' of https://github.com/mohan-dev-portfolio/Portfolio
+[33m0e573cb[m 1
+[33m2575f06[m Add files via upload
+[33m7231805[m Update GitHub link for Nebula project
+[33mff3a676[m Update project details and tags in index.html
+[33m58ee709[m 1
+[33m630b13b[m Initial commit
